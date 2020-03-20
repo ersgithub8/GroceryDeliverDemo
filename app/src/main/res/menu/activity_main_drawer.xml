@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <group>
+        <item
+            android:id="@+id/Dashboard"
+            android:icon="@drawable/ic_dashboard_black_24dp"
+            android:title="Dashboard" />
+
+
+
+        <item
+            android:id="@+id/nav_order"
+            android:icon="@drawable/ic_nav_order"
+            android:title="@string/my_order" />
+
+        <item
+            android:id="@+id/nav_order1"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Invite Friends" />
+        <item
+            android:id="@+id/nav_order2"
+            android:icon="@drawable/ic_nav_policy"
+            android:title="Terms and Condition " />
+        <item
+            android:id="@+id/nav_order3"
+            android:icon="@drawable/ic_nav_review"
+            android:visible="false"
+            android:title="Review Us" />
+        <item
+            android:id="@+id/nav_log_out"
+            android:icon="@drawable/ic_nav_order"
+            android:title="@string/nav_logout" />
+        <item
+            android:id="@+id/nav_powered"
+            android:icon="@drawable/ic_nav_home"
+
+            android:title="Powered By GroMall" />
+
+    </group>
+</menu>

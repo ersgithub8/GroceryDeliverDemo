@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.Policy">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+
+        android:gravity="center_vertical"
+        android:text="  Terms &amp; Condition"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="match_parent"
+        android:textSize="15sp"
+        android:padding="12dp"
+        android:textColor="#000"
+
+        android:gravity="clip_vertical"
+        android:layout_gravity="clip_vertical"
+        android:text="* The Order item packed by the vendor should reach to the customer if there is any change inside the Order item. Then company can take appropriate action on the delivery boy\n
+\n
+* Order will have to be delivered at the scheduled time, if the order do not reach at the specified time then a penalty will be imposed. And if the customer does not take the order  when you late, then it will be your responsibility  and you will have to pay order amount to company .\n
+\n
+* You have to be constantly online in the shift you have prescribed. If you not followed your sift timing  you will not get any incentive if you are not online according to your selected schedule  .\n
+\n
+* It will be your responsibility to take the entire money on condition of  cash on delivery from the customer, take the money before giving order to the customer.\n
+\n
+* If an accident happens to you in your work shift, then it will be your responsibility.\n
+\n
+* Appropriate action will be taken if you have misbehaved with the customer.\n
+\n
+* Your delivery boy app can be discontinued if you do not wear clothes and ID Card given by the company during the working time.\n
+\n
+* Cash on delivery order amount will be paid to the company at the fixed limit. If it is not delivered, appropriate legal action will be taken.
+"/>
+
+</LinearLayout>

@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "594162830562",
+    "firebase_url": "https://grocerydemo-82984.firebaseio.com",
+    "project_id": "grocerydemo-82984",
+    "storage_bucket": "grocerydemo-82984.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594162830562:android:309cc908931068b3d9e2bb",
+        "android_client_info": {
+          "package_name": "com.GroMall_coustomer.tcc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594162830562-aq82otrrl612otmmcotub3143dmrqpsi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.GroMall_coustomer.tcc",
+            "certificate_hash": "73dd072b1f0fb84e9b6d501f3d7ebd0f16279d8d"
+          }
+        },
+        {
+          "client_id": "594162830562-j8d2j2mshko21v1itmtomvbn70nbebe2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBc_Z7UghQ_87cEKisJNaTxxmmwyp-1sw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594162830562-j8d2j2mshko21v1itmtomvbn70nbebe2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594162830562:android:f3bd8428bd3fc597d9e2bb",
+        "android_client_info": {
+          "package_name": "com.Gromall_dboy.tcc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594162830562-j8d2j2mshko21v1itmtomvbn70nbebe2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBc_Z7UghQ_87cEKisJNaTxxmmwyp-1sw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594162830562-j8d2j2mshko21v1itmtomvbn70nbebe2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594162830562:android:1dd10e0f95fdd815d9e2bb",
+        "android_client_info": {
+          "package_name": "com.Gromall_store.tcc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594162830562-j8d2j2mshko21v1itmtomvbn70nbebe2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBc_Z7UghQ_87cEKisJNaTxxmmwyp-1sw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594162830562-j8d2j2mshko21v1itmtomvbn70nbebe2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
