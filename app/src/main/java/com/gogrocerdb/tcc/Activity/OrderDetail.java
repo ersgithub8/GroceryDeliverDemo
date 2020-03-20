@@ -107,6 +107,9 @@ pickup_location.setOnClickListener(new View.OnClickListener() {
 
         String storeLat=getIntent().getStringExtra("store_lat");
         String storelang= getIntent().getStringExtra("store_lang");
+        if(storeLat.isEmpty()||storelang.isEmpty()){
+            Toast.makeText(OrderDetail.this, "Can't perform this operation.", Toast.LENGTH_SHORT).show();
+        }
         Intent intent = new Intent(OrderDetail.this,MapsActivity.class);
         intent.putExtra("customerLat",storeLat);
         intent.putExtra("customerLang",storelang);
@@ -120,7 +123,10 @@ pickup_location.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
                 String deliveryAddress=getIntent().getStringExtra("delivery_address");
-
+                if(deliveryAddress.isEmpty()){
+                    Toast.makeText(OrderDetail.this, "Can't perform this operation.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 String[] values = deliveryAddress.split(",");
                 String customerLat = values[0];
                 String customerLang = values[1];

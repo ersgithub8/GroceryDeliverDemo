@@ -62,13 +62,17 @@ public class LogInActivity extends AppCompatActivity {
 
         getemail = Et_login_email.getText().toString();
 
+
+
+        Btn_Sign_in.setEnabled(true);
         Btn_Sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (Et_login_email.equals("")) {
                     Toast.makeText(LogInActivity.this, "Please Put Your Currect Email-Id", Toast.LENGTH_SHORT).show();
                 } else {
-             makejson();                }
+             makejson();
+                }
             }
         });
 
@@ -116,14 +120,16 @@ public class LogInActivity extends AppCompatActivity {
                             Btn_Sign_in.setEnabled(false);
 
                         }
-                    } else {
+                        } else {
                         Btn_Sign_in.setEnabled(true);
 
                         Toast.makeText(LogInActivity.this, "Please Put Correct Number", Toast.LENGTH_SHORT).show();
                     }
 
-                } catch (JSONException e) {
-                    e.printStackTrace();
+                }
+                catch (JSONException e)
+                {
+                        e.printStackTrace();
                 }
 
             }

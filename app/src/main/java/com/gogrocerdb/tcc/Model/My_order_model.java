@@ -6,6 +6,26 @@ package com.gogrocerdb.tcc.Model;
 
 public class My_order_model {
 
+
+    String user_phone;
+    String user_fullname;
+
+    public String getUser_phone() {
+        return user_phone;
+    }
+
+    public void setUser_phone(String user_phone) {
+        this.user_phone = user_phone;
+    }
+
+    public String getUser_fullname() {
+        return user_fullname;
+    }
+
+    public void setUser_fullname(String user_fullname) {
+        this.user_fullname = user_fullname;
+    }
+
     String sale_id;
     String user_id;
     String on_date;
@@ -30,6 +50,15 @@ public class My_order_model {
     String recivermobile;
     String store_lat;
     String store_lang;
+    String address;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
     public String getStore_lat() {
         return store_lat;

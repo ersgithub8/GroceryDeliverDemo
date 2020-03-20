@@ -47,7 +47,7 @@ SharedPreferences preferences;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView tv_orderno, tv_status, tv_date, tv_time, tv_price, tv_item, relativetextstatus, tv_tracking_date,tv_socity,
-                tv_recivername,tv_recivernumber,tv_house;
+                tv_recivername,tv_recivernumber,tv_house,tv_address;
         CardView cardView;
 
         public MyViewHolder(View view) {
@@ -65,6 +65,7 @@ SharedPreferences preferences;
             tv_recivername=view.findViewById(R.id.tv_recivername);
             tv_recivernumber=view.findViewById(R.id.tv_recivernmobile);
             cardView = view.findViewById(R.id.card_view);
+            tv_address=(TextView) view.findViewById(R.id.tv_address1);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -86,7 +87,8 @@ SharedPreferences preferences;
                         String deliveryAddress=modelList.get(position).getDelivery_address();
                         String storeLat = modelList.get(position).getStore_lat();
                         String storeLong = modelList.get(position).getStore_lang();
-
+                        String userphone=modelList.get(position).getUser_phone();
+                        String fullname=modelList.get(position).getUser_fullname();
                         Intent intent = new Intent(context, OrderDetail.class);
                         intent.putExtra("sale_id", saleid);
                         intent.putExtra("placedon", placedon);
@@ -98,6 +100,8 @@ SharedPreferences preferences;
                         intent.putExtra("house_no",house);
                         intent.putExtra("receiver_name",recivername);
                         intent.putExtra("receiver_mobile",recivermobile);
+                        intent.putExtra("receiver_name",recivername);
+                        intent.putExtra("user_mobile",userphone);
                         intent.putExtra("delivery_address",deliveryAddress);
                         intent.putExtra("store_lat",storeLat);
                         intent.putExtra("store_lang",storeLong);
@@ -202,8 +206,9 @@ SharedPreferences preferences;
             holder.tv_item.setText(context.getResources().getString(R.string.tv_cart_item) + mList.getTotal_items());
             holder.tv_socity.setText(mList.getSocityname());
             holder.tv_house.setText(mList.getHouse());
-            holder.tv_recivername.setText(modelList.get(position).getRecivername());
-            holder.tv_recivernumber.setText(mList.getRecivermobile());
+            holder.tv_recivername.setText(modelList.get(position).getUser_fullname());
+            holder.tv_recivernumber.setText(mList.getUser_phone());
+            holder.tv_address.setText(mList.getAddress());
         }
 
 

@@ -1,7 +1,6 @@
 package com.gogrocerdb.tcc.Fragment;
 
 import android.app.Fragment;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -17,11 +16,9 @@ import com.android.volley.Response;
 import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
-import com.gogrocerdb.tcc.Activity.LogInActivity;
 import com.gogrocerdb.tcc.Adapter.My_Order_Adapter;
 import com.gogrocerdb.tcc.AppController;
 import com.gogrocerdb.tcc.Config.BaseURL;
-import com.gogrocerdb.tcc.MainActivity;
 import com.gogrocerdb.tcc.Model.My_order_model;
 import com.gogrocerdb.tcc.R;
 import com.gogrocerdb.tcc.util.CustomVolleyJsonArrayRequest;
@@ -83,6 +80,8 @@ public class Home extends Fragment {
                     for (int i = 0; i < response.length(); i++) {
 
                         JSONObject obj = response.getJSONObject(i);
+                        String username=obj.getString("user_fullname");
+                        String phone=obj.getString("user_phone");
                         String saleid = obj.getString("sale_id");
                         String placedon = obj.getString("on_date");
                         String timefrom = obj.getString("delivery_time_from");
@@ -98,10 +97,15 @@ public class Home extends Fragment {
                         String deliveryAddress = obj.getString("delivery_address");
                         String storelat = obj.getString("store_lat");
                         String storelong = obj.getString("store_lang");
+                        String address=obj.getString("address");
                        // Toast.makeText(getActivity(), deliveryAddress, Toast.LENGTH_SHORT).show();
                         My_order_model my_order_model = new My_order_model();
+
+                        my_order_model.setUser_fullname(username);
+                        my_order_model.setUser_phone(phone);
                         my_order_model.setSocityname(society);
                         my_order_model.setHouse(house);
+                        my_order_model.setAddress(address);
                         my_order_model.setRecivername(rename);
                         my_order_model.setRecivermobile(renumber);
                            my_order_model.setDelivery_time_from(timefrom);
