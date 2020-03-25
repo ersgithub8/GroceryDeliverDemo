@@ -17,7 +17,7 @@ public class BaseURL {
     public static final String KEY_ID = "user_id";
     public static final String KEY_ORDER_ID = "ORDER_ID";
 
-    public static String BASE_URL = "http://groomall-fontend.eparking.website/backend/";
+    public static String BASE_URL = "https://gromal.finalyearprojects.website/backend/";
     public static final String DELETE_ORDER_URL = BASE_URL + "index.php/api/up_order";
     public static final String DEL_LOCATION = BASE_URL + "index.php/api/save_del_location";
     public static String GET_ORDER_URL = BASE_URL+"index.php/api/delivery_boy_order";
