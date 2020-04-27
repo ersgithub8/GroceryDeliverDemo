@@ -1,5 +1,7 @@
 package com.gogrocerdb.tcc.Activity;
 
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -62,17 +64,13 @@ public class LogInActivity extends AppCompatActivity {
 
         getemail = Et_login_email.getText().toString();
 
-
-
-        Btn_Sign_in.setEnabled(true);
         Btn_Sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (Et_login_email.equals("")) {
                     Toast.makeText(LogInActivity.this, "Please Put Your Currect Email-Id", Toast.LENGTH_SHORT).show();
                 } else {
-             makejson();
-                }
+             makejson();                }
             }
         });
 
@@ -82,7 +80,10 @@ public class LogInActivity extends AppCompatActivity {
 
 
     public void makejson() {
-
+        final AlertDialog loading=new ProgressDialog(LogInActivity.this);
+        loading.setMessage("Loading...");
+        loading.setCancelable(false);
+        loading.show();
         String tag_json_obj = "json_login_req";
 
          String UserName = Et_login_email.getText().toString().trim();
@@ -99,6 +100,7 @@ public class LogInActivity extends AppCompatActivity {
 
 
                 try {
+                    loading.dismiss();
                     String status = response.getString("responce");
 
                     if (status.contains("true")) {
@@ -120,16 +122,15 @@ public class LogInActivity extends AppCompatActivity {
                             Btn_Sign_in.setEnabled(false);
 
                         }
-                        } else {
+                    } else {
                         Btn_Sign_in.setEnabled(true);
 
                         Toast.makeText(LogInActivity.this, "Please Put Correct Number", Toast.LENGTH_SHORT).show();
                     }
 
-                }
-                catch (JSONException e)
-                {
-                        e.printStackTrace();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    loading.dismiss();
                 }
 
             }
@@ -143,7 +144,7 @@ public class LogInActivity extends AppCompatActivity {
         });
 
         AppController.getInstance().addToRequestQueue(jsonObjReq, tag_json_obj);
-
+        loading.dismiss();
     }
     private void checkLogin(String user_id, String token) {
         // Tag used to cancel the request
